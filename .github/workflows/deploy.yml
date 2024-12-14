@@ -70,7 +70,7 @@ jobs:
         working-directory: dorrot-blog
 
       - name: Build Next.js site
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next export
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next build
         working-directory: dorrot-blog
 
       - name: Upload artifact
