@@ -49,6 +49,7 @@ jobs:
         with:
           node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: dorrot-blog/yarn.lock
 
       - name: Configure GitHub Pages for Next.js
         uses: actions/configure-pages@v5
