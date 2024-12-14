@@ -7,7 +7,7 @@ name: Deploy Next.js site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    # branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          BASE_DIR="${{ github.workspace }}/dorrot-blog"
+          BASE_DIR="${{ github.workspace }}"
           if [ -f "${BASE_DIR}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
