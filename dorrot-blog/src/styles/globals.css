@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+@layer components {
+  .root-container {
+    @apply mx-auto max-w-6xl px-5;
+  }
+
+  .full-container {
+    @apply relative left-1/2 -ml-[50vw] box-border w-screen;
+  }
+}

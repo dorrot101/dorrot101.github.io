@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import "../styles/globals.css";
 import "@mantine/core/styles.css";
 
 export const metadata: Metadata = {
-  title: "Dorrot Blog",
-  description: "A blog about web development and other things.",
+  title: "dorrot's blog",
+  description: "The blog about web development and other things.",
 };
 
 export default function RootLayout({
@@ -17,9 +18,10 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-
-      <body>
-        <MantineProvider>{children}</MantineProvider>
+      <body className="root-container">
+        <MantineProvider>
+          <main>{children}</main>
+        </MantineProvider>
       </body>
     </html>
   );
