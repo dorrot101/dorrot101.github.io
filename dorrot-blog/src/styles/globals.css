@@ -8,6 +8,14 @@
   }
 } */
 
+.full-container {
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
 @layer components {
   .root-container {
     @apply mx-auto max-w-6xl px-5;
@@ -15,5 +23,21 @@
 
   .full-container {
     @apply relative left-1/2 -ml-[50vw] box-border w-screen;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* 애니메이션 클래스 */
+  .scroll-left {
+    animation: scroll-left 10s linear infinite;
   }
 }

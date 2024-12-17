@@ -1,6 +1,6 @@
 const SkillSection = () => {
   return (
-    <section>
+    <section className="min-h-screen snap-center snap-always">
       <h1>Career</h1>
       <p>My career</p>
     </section>
